@@ -1,0 +1,836 @@
+body {
+  margin: 0;
+  font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+  min-width: 1400px;
+  font-weight: 300;
+  line-height: 1.2;
+  position: relative;
+}
+
+#fullContainer {
+  position: relative;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 1240px;
+}
+
+#header {
+  box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #fff;
+  z-index: 1000;
+  will-change: transform;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+  contain: size layout style;
+  padding: 0 20px;
+  display: block;
+}
+
+#navbar {
+  max-width: 1200px;
+  min-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  height: 80px;
+  background: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+}
+
+#slogo {
+  height: 49px;
+  /* border: 1px solid red; */
+  /* width: 34px; */
+}
+#navBar > a {
+  margin-right: 16px;
+}
+
+#secureCheckoutDiv {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 14px;
+  width: 300px;
+  /* height: ; */
+}
+#secureCheckoutDiv > span {
+  font-weight: 700;
+  color: #3d4152;
+  text-transform: uppercase;
+}
+#extraPart {
+  /* border: 1px solid green; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 20px;
+  padding: 1px;
+}
+
+.navBox {
+  display: flex;
+  /* border: 1px solid red; */
+  flex-direction: row;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 20px;
+  /* padding: 1px; */
+  /* margin: auto; */
+}
+
+#helpCheckoutBox > a {
+  text-decoration: none;
+  color: #282c3f;
+}
+#helpCheckoutBox > a:hover {
+  color: #fc8019;
+}
+.navBox:hover {
+  cursor: pointer;
+  color: #fc8019;
+}
+#helpImg {
+  width: 20px;
+  height: 20px;
+}
+.extraPartInnerDiv {
+  margin: auto;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#navButtonUpperDiv {
+  margin: auto;
+  margin-right: 0;
+  /* display: none; */
+  /* border: 1px solid red; */
+}
+
+#navButtonDiv {
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-right: 0;
+  display: flex;
+  /* width: 200px; */
+}
+
+#loggedUpperDiv {
+  margin: auto;
+  margin-right: 0;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+#loggedUser > div {
+  display: flex;
+}
+#loggedUser {
+  padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  /* height: 45px; */
+  margin: auto;
+  /* margin-right: 0; */
+  /* align-items: center; */
+  /* display: none; */
+}
+
+#loggedUser > div {
+  margin: auto;
+  /* border: 1px solid red; */
+  text-align: center;
+  /* text-align: center; */
+  align-items: center;
+}
+#loggedUser > div > button {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  display: inline;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+#loggedUser > div > button:hover,
+#loggedUser > div:hover {
+  cursor: pointer;
+  /* color: #FC8019; */
+}
+#loggedUser > div > img {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  /* border-radius: 100px; */
+  /* border: 1px solid blue; */
+}
+
+.navBtn {
+  width: 80px;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  color: #282c3f;
+}
+.navBtn:hover {
+  cursor: pointer;
+}
+#loginBtn:hover {
+  color: #fc8019;
+}
+
+#logoutDropDown {
+  text-align: center;
+  padding: 5px;
+  /* border: 1px solid red; */
+  background-color: white;
+  position: absolute;
+  margin: auto;
+  width: 94%;
+  right: -1px;
+  /* top: 50px; */
+  border-top: 1.5px solid #fc8019;
+  /* margin-top: 5px; */
+
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: none; /*logout display */
+}
+
+#logoutDropDown > button:hover {
+  cursor: pointer;
+  border: 0.1px solid rgba(128, 128, 128, 0.151);
+  border-radius: 10px;
+  /* border: 1px solid red; */
+}
+#logoutDropDown > button {
+  font-size: 15px;
+  /* color: #fff; */
+  font-weight: 600;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  border: 0.1px solid rgba(128, 128, 128, 0.075);
+  border-radius: 10px;
+  /* border: 1px solid red;  */
+}
+
+#navButtonUpperDiv,
+#loggedUpperDiv {
+  margin-left: 0;
+}
+
+#middlePart {
+  /* height: 500px; */
+  background-color: #e9ecee;
+  height: 100%;
+  border: 0.1px solid #e9ecee;
+}
+
+#middlePartInnerDiv {
+  max-width: 1200px;
+  min-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 31px;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  /* border: 1px solid red; */
+}
+
+#middlePartInnerLeftPart {
+  width: 804px;
+  /* background-color: #FFFFFF; */
+  /* border: 1px solid black; */
+  margin: auto;
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* row-gap: 20px; */
+}
+
+#middlePartInnerRightPart {
+  width: 366px;
+  /* max-height: 500px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #e9ecee;
+  /* border: 1px solid black; */
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+#heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#addressUpperDiv {
+  /* border: 1px solid red; */
+  position: relative;
+  background-color: #ffffff;
+}
+#addressBox {
+  margin: 0 0 20px 25px;
+  padding: 35px 40px 39px;
+  /* border: 1px solid blue; */
+}
+
+#addresses {
+  width: 699px;
+  /* border: 1px solid green; */
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+#locationIcon {
+  margin-top: 20px;
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+}
+
+#newAdress {
+  display: flex;
+  border: 0.1px solid lightgray;
+  padding: 0 30px 30px 30px;
+}
+
+#addNewBtn {
+  border: 1px solid #60b246;
+  font-weight: 600;
+  color: #60b246;
+  padding: 10px 20px 10px 20px;
+  margin-top: 50px;
+  background-color: white;
+  cursor: pointer;
+}
+
+#addresses > :hover {
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: translateZ(0);
+  transition: transform 0.3s ease;
+}
+
+#paymentUpperBox {
+  /* border: 1px solid red; */
+  position: relative;
+  background-color: #ffffff;
+  /* height: 500px; */
+}
+
+#paymentBox {
+  padding: 35px 40px 39px;
+  display: flex;
+  /* border: 1px solid blue; */
+}
+
+.paymentIcons {
+  width: 35px;
+  height: 35px;
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+#paymentHeading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #282c3f;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+#innerPartPayment {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.paymentOptionsDivs {
+  display: flex;
+  height: 70px;
+  text-align: left;
+  margin-bottom: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  padding-right: 5px;
+  /* border: 1px solid red; */
+  /* margin: auto; */
+}
+
+.paymentOptionsDivs > span {
+  margin: auto;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-right: 0px;
+  color: #686b78;
+}
+
+#paymentOptions {
+  /* border: 1px solid red; */
+  width: 445px;
+  padding-left: 20px;
+}
+
+#selectMethod {
+  background-color: #edf1f7;
+  padding: 20px 30px 20px 20px;
+  width: 200px;
+}
+
+#paymentSectionDiv {
+  padding-left: 30px;
+}
+
+#paymentGatewayPng {
+  width: 100%;
+  padding-top: 40px;
+  text-align: center;
+}
+/* 
+#walletItemBox {
+  display: none;
+} */
+
+.itemBoxInnerDivs {
+  padding: 30px;
+  width: 120%;
+  padding-bottom: 29px;
+  border: 1px solid #e9e9eb;
+  margin-bottom: 20px;
+}
+.itemBoxInnerDivs > img {
+  width: 40px;
+  max-height: 40px;
+}
+.itemBoxInnerDivs > h3 {
+  color: #282c3f;
+  font-weight: 500;
+  font-size: 17px;
+}
+.itemBoxInnerDivs > p {
+  color: #fc8019;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.itemBoxInnerDivs > button {
+  background-color: #60b246;
+  color: white;
+  font-weight: 600;
+  border-style: none;
+  padding: 10px 30px 10px 30px;
+  cursor: pointer;
+}
+
+#middlePartInnerRightPart {
+  width: 366px;
+  /* max-height: 500px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #e9ecee;
+  /* border: 1px solid black; */
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+#rightSideUpperBoxForCart {
+  /* border: 1px solid red; */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#rightSideUpperBoxForCartDiv1 {
+  height: 40px;
+  /* border: 1px solid blue; */
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 0;
+  /* align-items: center; */
+}
+#rightSideUpperBoxForCartDiv2 {
+  /* border: 1px solid blue; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  height: 300px;
+}
+
+#emptyCart {
+  /* border: 1px solid red; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* display: none; */
+  margin: auto;
+  text-align: center;
+}
+#emptyCart > img {
+  /* margin-top: 0px; */
+  width: 100%;
+  /* height: 280px; */
+}
+#emptyCart > span {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+#cancellitionPolicyBox {
+  background-color: #ffffff;
+  margin-top: 16px;
+  /* border: 1px solid red; */
+  height: 262px;
+}
+
+#cancelInnerBox {
+  height: 200px;
+  width: 280px;
+  border: 1px solid red;
+  margin: auto;
+  margin-top: 20px;
+  padding: 16px 16px 0 !important;
+  /* padding-top: -10px; */
+  border: 1px solid #e9e9eb;
+  border-radius: 5px;
+  padding-bottom: 0px;
+}
+#cancelInnerBox > h3 {
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3e4152;
+}
+#cancelInnerBox > p {
+  font-size: 13px;
+  color: #3e4152;
+  font-weight: 300;
+}
+#cancelInnerBox > div {
+  color: #ec6148 !important;
+  /* border-bottom: 1px dotted #ec6148!important; */
+  padding-bottom: 2px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+  /* border: 1px solid red; */
+  margin: auto;
+  /* padding: 0%; */
+  margin-top: 23px;
+}
+#cancelInnerBox > hr {
+  border: 0.1px solid #ec6148;
+  background-color: #ec6148;
+  width: 171px;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#cardDetailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  justify-content: center;
+  /* align-items: center; */
+  width: 360px;
+  margin: auto;
+  /* border: 1px solid red; */
+  /* margin-top: -15px; */
+  margin-bottom: 35px;
+  margin-top: 10px;
+  padding: 5px;
+  padding-left: 0;
+  padding-right: 10px;
+  /* font-size: 1.2rem; */
+}
+
+.cardform {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  color: #5d8ed5;
+  transform: translateZ(0);
+  cursor: pointer;
+  will-change: transform;
+  transition: 0.2s ease;
+  /* padding-left: -2px; */
+}
+.cardform__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 50px; */
+  border: 1px solid #d4d5d9;
+  outline: none;
+  color: #282c3f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1.25rem;
+  padding: 20px 22px 20px;
+  background: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.cardform__label {
+  position: absolute;
+  left: 1rem;
+  top: 30%;
+  padding: 0 0.5rem;
+  color: gray;
+  font-weight: 500;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.cardform__input:focus ~ .cardform__label {
+  top: 0.2rem;
+  font-size: 0.75rem;
+  left: 0.3rem;
+}
+
+#make2InputInSingleRow {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+/* #make2InputInSingleRow > div {
+  width: 200px;
+} */
+
+#cvvCard {
+  width: 150px;
+  margin-left: 25px;
+  margin-right: -20px;
+}
+
+#upperImagesLine {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#upperImagesLine > div > img {
+  max-height: 14px;
+  min-height: 14px;
+  /* border: 1px solid red; */
+}
+#upperImagesLine > div + div {
+  margin: auto;
+  margin-left: 0;
+  /* margin-top: 2px; */
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.payBtn {
+  width: 120%;
+}
+
+.payBtn > button {
+  width: 100%;
+  padding: 15px;
+  background-color: #60b246;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-style: none;
+  cursor: pointer;
+}
+
+#upperBanks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.upperBankInnerBox {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 15px;
+  border: 0.5px solid lightgray;
+  width: 162px;
+  cursor: pointer;
+}
+.upperBankInnerBox:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.upperBankInnerBox > img {
+  height: 40px;
+}
+
+.bankPayBtn {
+  width: 100%;
+}
+
+.bankPayBtn > button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #60b246;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-style: none;
+  cursor: pointer;
+}
+
+#upiItemBoxFirstInnerDiv {
+  display: flex;
+  flex-direction: row;
+  margin-left: -10px;
+  padding-right: 5px;
+}
+#upiItemBoxFirstInnerDiv > img {
+  /* width: 30px; */
+  height: 20px;
+  margin: auto;
+}
+#upiItemBoxFirstInnerDiv > p {
+  font-size: 13px;
+  width: 235px;
+  font-weight: 300;
+}
+#upiItemBoxFirstInnerDiv > span {
+  color: #5d8ed5;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: auto;
+  margin-top: 13px;
+  /* width: 235px; */
+}
+
+#imagesLine {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+#imagesLineImageDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#imagesLineImageDiv > img {
+  height: 20px;
+  /* border: 1px solid red; */
+}
+
+#upiDetailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  justify-content: center;
+  /* align-items: center; */
+  width: 360px;
+  margin: auto;
+  /* border: 1px solid red; */
+  /* margin-top: -15px; */
+  margin-bottom: 35px;
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 5px;
+  padding-left: 0;
+  padding-right: 10px;
+  /* font-size: 1.2rem; */
+}
+
+.upiform {
+  position: relative;
+  width: 320px;
+  height: 55px;
+  padding: 0;
+}
+.upiform__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d4d5d9;
+  outline: none;
+  color: #282c3f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* padding: 1.25rem; */
+  padding: 20px 22px 0px;
+  background: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.upiform__label {
+  position: absolute;
+  left: 1rem;
+  top: 53%;
+  padding: 0 0.5rem;
+  color: gray;
+  font-weight: 500;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.upiform__input:focus ~ .upiform__label {
+  top: 1rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
