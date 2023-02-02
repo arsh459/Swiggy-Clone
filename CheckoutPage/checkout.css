@@ -330,6 +330,7 @@ body {
   padding: 10px 20px 10px 20px;
   margin-top: 50px;
   background-color: white;
+  cursor: pointer;
 }
 
 #addresses > :hover {
@@ -407,6 +408,7 @@ body {
 #selectMethod {
   background-color: #edf1f7;
   padding: 20px 30px 20px 20px;
+  width: 200px;
 }
 
 #paymentSectionDiv {
@@ -564,4 +566,271 @@ body {
   width: 171px;
   margin-left: 0;
   margin-top: 0;
+}
+
+#cardDetailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  justify-content: center;
+  /* align-items: center; */
+  width: 360px;
+  margin: auto;
+  /* border: 1px solid red; */
+  /* margin-top: -15px; */
+  margin-bottom: 35px;
+  margin-top: 10px;
+  padding: 5px;
+  padding-left: 0;
+  padding-right: 10px;
+  /* font-size: 1.2rem; */
+}
+
+.cardform {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  color: #5d8ed5;
+  transform: translateZ(0);
+  cursor: pointer;
+  will-change: transform;
+  transition: 0.2s ease;
+  /* padding-left: -2px; */
+}
+.cardform__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 50px; */
+  border: 1px solid #d4d5d9;
+  outline: none;
+  color: #282c3f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1.25rem;
+  padding: 20px 22px 20px;
+  background: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.cardform__label {
+  position: absolute;
+  left: 1rem;
+  top: 30%;
+  padding: 0 0.5rem;
+  color: gray;
+  font-weight: 500;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.cardform__input:focus ~ .cardform__label {
+  top: 0.2rem;
+  font-size: 0.75rem;
+  left: 0.3rem;
+}
+
+#make2InputInSingleRow {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+/* #make2InputInSingleRow > div {
+  width: 200px;
+} */
+
+#cvvCard {
+  width: 150px;
+  margin-left: 25px;
+  margin-right: -20px;
+}
+
+#upperImagesLine {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#upperImagesLine > div > img {
+  max-height: 14px;
+  min-height: 14px;
+  /* border: 1px solid red; */
+}
+#upperImagesLine > div + div {
+  margin: auto;
+  margin-left: 0;
+  /* margin-top: 2px; */
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.payBtn {
+  width: 120%;
+}
+
+.payBtn > button {
+  width: 100%;
+  padding: 15px;
+  background-color: #60b246;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-style: none;
+  cursor: pointer;
+}
+
+#upperBanks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.upperBankInnerBox {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 15px;
+  border: 0.5px solid lightgray;
+  width: 162px;
+  cursor: pointer;
+}
+.upperBankInnerBox:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.upperBankInnerBox > img {
+  height: 40px;
+}
+
+.bankPayBtn {
+  width: 100%;
+}
+
+.bankPayBtn > button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #60b246;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-style: none;
+  cursor: pointer;
+}
+
+#upiItemBoxFirstInnerDiv {
+  display: flex;
+  flex-direction: row;
+  margin-left: -10px;
+  padding-right: 5px;
+}
+#upiItemBoxFirstInnerDiv > img {
+  /* width: 30px; */
+  height: 20px;
+  margin: auto;
+}
+#upiItemBoxFirstInnerDiv > p {
+  font-size: 13px;
+  width: 235px;
+  font-weight: 300;
+}
+#upiItemBoxFirstInnerDiv > span {
+  color: #5d8ed5;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: auto;
+  margin-top: 13px;
+  /* width: 235px; */
+}
+
+#imagesLine {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+#imagesLineImageDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#imagesLineImageDiv > img {
+  height: 20px;
+  /* border: 1px solid red; */
+}
+
+#upiDetailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  justify-content: center;
+  /* align-items: center; */
+  width: 360px;
+  margin: auto;
+  /* border: 1px solid red; */
+  /* margin-top: -15px; */
+  margin-bottom: 35px;
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 5px;
+  padding-left: 0;
+  padding-right: 10px;
+  /* font-size: 1.2rem; */
+}
+
+.upiform {
+  position: relative;
+  width: 320px;
+  height: 55px;
+  padding: 0;
+}
+.upiform__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d4d5d9;
+  outline: none;
+  color: #282c3f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* padding: 1.25rem; */
+  padding: 20px 22px 0px;
+  background: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.upiform__label {
+  position: absolute;
+  left: 1rem;
+  top: 53%;
+  padding: 0 0.5rem;
+  color: gray;
+  font-weight: 500;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.upiform__input:focus ~ .upiform__label {
+  top: 1rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
 }
