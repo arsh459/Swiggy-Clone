@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+      <style>
+         body{
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    position: relative;
+}
+#upperContainer{
+    height: 280px;
+    /* border: 1px solid red; */
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: #171a29;
+}
+#restaurantimgDiv{
+    width: 350px;
+    padding: 5px;
+    margin : auto;
+    /* border: 1px solid blue; */
+    text-align: center;
+    margin-right: 0;
+}
+#restaurantimgDiv>img{
+    width: 100%;
+    /* height: 100%; */
+}
+#restaurantDetailsDiv{
+    /* border: 1px solid red; */
+    padding: 5px;
+    margin: auto;
+    margin-left: 0;
+    color: #ffffff;
+
+}
+#xtraRestaurantDetailsDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#xtraRestaurantDetailsDiv>div{
+    /* padding-left: 25px; */
+    padding-right: 20px;
+}
+#Restaurantrating,#RestaurantDeliveryTime{
+    border-right: 1px solid white;
+}
+#Restaurantrating,#RestaurantDeliveryTime,#Restaurantcost{
+    color:aliceblue;
+    margin: 0;
+}
+#xtraRestaurantDetailsDiv>div>p{
+    margin: 0;
+    margin-top: 5px;
+}
+#restaurantDetailsDiv>h2{
+    margin: 0;
+}
+#foodaItem{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+    width: 80%;
+    /* margin: auto; */
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+#categoryBox{
+    /* border : 1px solid red; */
+    text-align: right;
+}
+#categoryList{
+    list-style-type: none;
+    line-height: 1.3rem;
+    font-size: 15px;
+    font-weight: 500;
+}
+#categoryList>li:hover{
+    cursor: pointer;
+    font-size: 15.5px;
+    color: #FC8019;
+}
+#categoryItemBox{
+    /* border:1px solid red; */
+    border-left: 1px solid gray;
+    padding-left: 20px;
+    
+}
+.list-group-item{
+    padding: 5px;
+    padding-right : 20px;
+}
+#foodItemInCatagory{
+    display: flex;
+    flex-direction: column;
+}
+.xtraDetailsChangeCSS{
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;
+}
+.restaurantDetailsDivCSS{
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+    margin: 10px;
+    margin-left: 0;
+}
+#restaurantDetailsDivName{
+    font-size : 32px;
+    font-weight: 600;
+}
+#categoryHeading{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+#totalItemsCount{
+    text-transform: uppercase;
+    margin-top: 3px;
+    font-weight: 600;
+    color: #686b78;
+    font-size: 13px;
+}
+.foodItemName{
+    font-size: 1.22rem;
+    font-weight: 500;
+    color: #3e4152;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.foodItemPrice{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.foodItemDescript{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #686b78;
+    font-size: .9rem;
+}
+.foodItemCard{
+     /* border: 1px solid red;  */
+    padding-bottom: 15px;
+    padding-top: 15px;
+    /* border-bottom: 1px solid gray; */
+    position: relative;
+}
+ /* .addToCartBtn{
+    position: absolute;
+    right: -10px;
+    top: 500px;
+    border: none;
+    background-color: #438f2b;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 5px;
+    position: relative;
+}  */
+    </style>   
+  <!-- <style>
+    body{
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    position: relative;
+}
+#upperDivForDetails{
+    height: 280px;
+    /* border: 1px solid red; */
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: #171a29;
+}
+#restaurantImageDiv{
+    width: 350px;
+    padding: 5px;
+    margin : auto;
+    /* border: 1px solid blue; */
+    text-align: center;
+    margin-right: 0;
+}
+#restaurantImageDiv>img{
+    width: 100%;
+    /* height: 100%; */
+}
+#restaurantDetailsDiv{
+    /* border: 1px solid red; */
+    padding: 5px;
+    margin: auto;
+    margin-left: 0;
+    color: #ffffff;
+
+}
+#extraDetailsForRestaurant{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#extraDetailsForRestaurant>div{
+    /* padding-left: 25px; */
+    padding-right: 20px;
+}
+#restaurantRating,#restaurantDeliveryTime{
+    border-right: 1px solid white;
+}
+#extraDetailsForRestaurant>div>h4{
+    margin: 0;
+}
+#extraDetailsForRestaurant>div>p{
+    margin: 0;
+    margin-top: 5px;
+}
+#restaurantDetailsDiv>h2{
+    margin: 0;
+}
+#foodItemsBox{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+    width: 80%;
+    /* margin: auto; */
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+#categoryBox{
+    /* border : 1px solid red; */
+    text-align: right;
+}
+#categoryList{
+    list-style-type: none;
+    line-height: 1.3rem;
+    font-size: 15px;
+    font-weight: 500;
+}
+#categoryList>li:hover{
+    cursor: pointer;
+    font-size: 15.5px;
+    color: #FC8019;
+}
+#categoryItemBox{
+    /* border:1px solid red; */
+    border-left: 1px solid gray;
+    padding-left: 20px;
+    
+}
+.list-group-item{
+    padding: 5px;
+    padding-right : 20px;
+}
+#totalItemsInCategory{
+    display: flex;
+    flex-direction: column;
+}
+.extraDetailsChangeCSS{
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;
+}
+.restaurantDetailsDivChangeCSS{
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+    margin: 10px;
+    margin-left: 0;
+}
+#restaurantDetailsDivName{
+    font-size : 32px;
+    font-weight: 600;
+}
+#categoryHeading{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+#totalItemsCountInCategory{
+    text-transform: uppercase;
+    margin-top: 3px;
+    font-weight: 600;
+    color: #686b78;
+    font-size: 13px;
+}
+.foodItemName{
+    font-size: 1.22rem;
+    font-weight: 500;
+    color: #3e4152;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.foodItemPrice{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.foodItemDescription{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #686b78;
+    font-size: .9rem;
+}
+.foodItemCard{
+    /* border: 1px solid red; */
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid gray;
+    position: relative;
+}
+.addToCartBtn{
+    position: absolute;
+    right: -70px;
+    top: 35px;
+    border: none;
+    background-color: #60b246;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+#noOfCartItems{
+    /* border: 1px solid red; */
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 100%;
+    background-color: #60b246;
+    color: white;
+    font-weight: 600;
+    margin-left: 5px;
+    display: none;
+}
+#alertBoxUpperDiv2{
+    display: none;
+}
+.closePopup{
+    font-weight: bold;
+    font-size: 20px;
+}
+  .closePopup:hover{
+    cursor: pointer;
+    color: #FC8019;
+  }
+
+  .alertBox{
+    /* border: 1px solid red; */
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    /* border: .1px solid #fc7f1939; */
+    border-radius: 5px;
+    background-color: rgba(245, 245, 245, 0.733);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
+  }
+  .alertBox:hover{
+      background-color: rgba(245, 245, 245, 0.773);
+    /* border: .1px solid #fc7f1950; */
+  }
+  .alertMSG{
+      margin: auto;
+      margin-left: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: black;
+  }
+  .alertBoxUpperDiv{
+    /* border: 1px solid blue; */
+    /* padding: 1px; */
+    /* align-items: center; */
+    width: 341px;
+    position: absolute;
+    /* top: 0px; */
+    bottom: 0;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+  }
+  </style>   -->
+        
+</head>
+<body>
+     <div id="fullContainer">
+     <div id="upperContainer">
+        <div id="restaurantimgDiv">
+            <img id="img" src="" alt="">
+        </div> 
+         <div id="restaurantDetailsDiv">
+        <h2   id="restaurantDetailsDivName"></h2>
+        <p class="restaurantDetailsDivCSS" id="restaurantDetailsDivCuisine"></p>
+        <p class="restaurantDetailsDivCSS"id="restaurantDetailsDivAddress"></p>
+        
+        <div id="xtraRestaurantDetailsDiv">
+            <div id="Restaurantrating">
+                <h4></h4>
+                <p class="xtraDetailsChangeCSS">500+ rating</p>
+            </div>
+            <div id="RestaurantDeliveryTime">
+                <h4></h4>
+                <p class="xtraDetailsChangeCSS">DeliveryTime</p>
+            </div>
+            <div id="Restaurantcost">
+                <h4></h4>
+                <p class="xtraDetailsChangeCSS">Cost for Two</p>
+            </div>
+            </div>
+        </div>
+     </div>
+     
+     <div id="minisearchdiv">
+        <input id="minisearch" placeholder="Search for dishes..">
+    </div>      
+     <div id="foodaItem">
+        
+        <div id="categoryBox">
+            <ul id="categoryList">
+            
+            
+            </ul>
+        </div>
+        <div id="categoryItemBox">
+          <div>
+            <h3 id="categoryHeading"></h3>
+            <p id="totalItemsCountInCategory"></p>
+          </div>
+          <div id="totalItemInCatagory">
+            
+          </div>
+        </div>
+        <div id="checkout"></div>
+     </div>
+    </div>
+     
+
+     
+
+
+
+
+
+
+
+
+
+
+
+     <!-- <div id="root" style="height: 100%;">
+        <div id="fullContainer"> -->
+            <!-- <header>
+                <div id="headerContainer">
+                    <div id="headerContentContainer">
+                        <a href="./index.html" id="logo"><img src="https://cdn.worldvectorlogo.com/logos/swiggy-1.svg" alt="swiggylogo"></a>
+        
+                        <div id="currentLocation">Bangalore, Karnataka, India</div>
+        
+                        <ul id="headerContainerRight">
+                            <li id="search">
+                                <a href="./search.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/2048px-Search_Icon.svg.png">Search</a>
+                            </li>
+                            <li id="offer">
+                                <a href="./offers.html"><img src="https://static.thenounproject.com/png/971055-200.png" alt=""> Offers<pre><sup>New</sup></pre></a>
+                            </li>
+                            <li id="help">
+                                <a href="./help.html"><img src="https://cdn.pixabay.com/photo/2016/07/23/13/18/pokemon-1536847_960_720.png" alt=""> Help</a>
+                            </li>
+                            <li id="signIn">
+        
+                                <a href="./landingPage.html" id="signInA"><img src="https://www.transparentpng.com/thumb/user/single-user-icon-png-free--rLHSHx.png" alt="">Guest</a>
+                            </li>
+                            <li id="cart"><a href="./checkout.html">Cart <span id="noOfCartItems"></span></a></li>
+                        </ul>
+                    </div>
+                </div> -->
+        <!-- <div id="alertBoxUpperDiv2" class="alertBoxUpperDiv"></div>
+            </header>
+            <div id="upperDivForDetails">
+                <div id="restaurantImageDiv">
+                    <img src="" alt="">
+                </div>
+                <div id="restaurantDetailsDiv">
+                    <h2 id="restaurantDetailsDivName"></h2>
+                    <p class="restaurantDetailsDivChangeCSS" id="restaurantDetailsDivCuisine"></p>
+                    <p class="restaurantDetailsDivChangeCSS" id="restaurantDetailsDivAddress"></p>
+                    <div id="extraDetailsForRestaurant">
+                        <div id="restaurantRating">
+                            <h4></h4>
+                            <p class="extraDetailsChangeCSS">500+ Ratings</p>
+                        </div>
+                        <div id="restaurantDeliveryTime">
+                            <h4></h4>
+                            <p class="extraDetailsChangeCSS">Delivery Time</p>
+                        </div>
+                        <div id="restaurantCost">
+                            <h4></h4>
+                            <p class="extraDetailsChangeCSS">Cost for Two</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="foodItemsBox">
+                <div id="categoryBox">
+                    <ul id="categoryList">
+                       
+                    </ul>
+                </div>
+                <div id="categoryItemBox">
+                    <div>
+                        <h3 id="categoryHeading"></h3>
+                        <p id="totalItemsCountInCategory"></p>
+                    </div>
+                    <div id="totalItemsInCategory"></div>
+                </div>
+            </div>
+            <footer id="footerPart"></footer>
+        </div>
+    </div> -->
+
+</body>
+</html>
+<script src="./restaurantPage.js" type="module"></script>
