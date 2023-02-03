@@ -8,6 +8,7 @@ link.addEventListener("click", function() {
   clearTimeout(timeoutId);
   sidebar.style.display = "block";
   sidebar.style.animation = "slide-in 0.5s forwards";
+  console.log(link)
 });
 
 close.addEventListener("click", function() {
@@ -46,6 +47,7 @@ function signup3(){
 
 document.querySelector("#loginbtn").addEventListener("click", getOtp);
 var users=JSON.parse(localStorage.getItem("users"))|| [] ;
+var usersd=JSON.parse(localStorage.getItem("usersd"))|| [] ;
 function getOtp(){
     event.preventDefault();
     var phone = document.getElementById("phone").value;
@@ -68,7 +70,9 @@ function getOtp(){
         
             } else {     
                         users.push(phone);
+                        console.log(phone)
                         localStorage.setItem("users", JSON.stringify(users));
+
                         var name = document.createElement("INPUT");
                         name.setAttribute("type", "text");
                         name.setAttribute("id", "name");
@@ -98,8 +102,17 @@ function getOtp(){
 
 
 function signup2(){
+  
     event.preventDefault();
-    
+    var obj1 = {};     var phone = document.getElementById("phone").value;
+                       var name = document.getElementById("name").value;
+                       var email = document.getElementById("email").value;
+                       obj1.phoneno= phone;
+                        obj1.name4 = name;
+                        obj1.email4 = email;
+                        usersd.push(obj1);
+                    
+                      localStorage.setItem("usersd", JSON.stringify(usersd));
     var name1 = document.getElementById("name");
     name1.remove();
     var email1 = document.getElementById("email");
@@ -118,12 +131,25 @@ function signup2(){
 } 
 
 function signup4(){
-
   event.preventDefault();
   var phone =document.getElementById("phone").value;
   console.log(phone);
-  users.push(phone);
+  if (users.includes(phone + "") == true){
+    alert("user already exist");
+    window.location.href="signin.html"
+  }
+ else{
+  var obj = {};
+  var name2 = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  obj.phoneno= phone;
+  obj.name3 = name2;
+  obj.email3 = email;
+  console.log(phone);
+  users.push(phone)
+  usersd.push(obj);
   localStorage.setItem("users", JSON.stringify(users));
+  localStorage.setItem("usersd", JSON.stringify(usersd));
   var name1 = document.getElementById("name");
   name1.remove();
   var email1 = document.getElementById("email");
@@ -140,11 +166,17 @@ function signup4(){
                       document.querySelector("#otpbox").append(otpf,newbtn2);
                       document.querySelector("#otpbtn").addEventListener("click", visitHome2);
 } 
+}
+
+
 
 function visitHome(){
+
   event.preventDefault();
   if(document.querySelector("#otplogin").value==123456){
+    localStorage.setItem("auth", 1);
       window.location.href="index.html";
+      
       
   } else{
       alert("You have Entered Wrong OTP");
@@ -156,6 +188,7 @@ function visitHome2(){
   event.preventDefault();
   var otpverify1 = document.getElementById("otptext").value;
   if(otpverify1==123456){
+    localStorage.setItem("auth", 1);
     window.location.href="index.html";
 } else{
     alert("You have Entered Wrong OTP");
@@ -164,10 +197,3 @@ function visitHome2(){
 
 
 
-document.getElementById("phone").addEventListener("focus", function() {
-  this.classList.add("focused");
-});
-
-document.getElementById("phone").addEventListener("blur", function() {
-  this.classList.remove("focused");
-});
