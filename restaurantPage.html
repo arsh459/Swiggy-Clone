@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Page</title>
-      <style>
+    
+      <!-- <style>
          body{
     font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
     position: relative;
@@ -155,7 +156,7 @@
     /* border-bottom: 1px solid gray; */
     position: relative;
 }
- /* .addToCartBtn{
+/* button.foodItemCard{
     position: absolute;
     right: -10px;
     top: 500px;
@@ -170,8 +171,14 @@
     border-radius: 5px;
     position: relative;
 }  */
-    </style>   
-  <!-- <style>
+    </style> 
+     -->
+    
+
+
+
+
+  <style>
     body{
     font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
     position: relative;
@@ -230,7 +237,7 @@
 #foodItemsBox{
     /* border: 1px solid red; */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 10px;
     width: 80%;
@@ -238,7 +245,29 @@
     margin-top: 20px;
     padding-bottom: 50px;
 }
+#checkout{
+    /* border:1px solid ;
+ border-radius: 2px;
+ border-color: #60b246; */
+ width:150%;
+ margin-left: 10%;
+ padding-left: 20%;
+ padding-top: 20%;
+ 
+}
+#minicheckout{
+    /* border:1px solid ; 
+     border-color: #912215; */
+    width:90%;
+    height: 500px;
+    text-align: center;
+    
 
+}
+
+.checkoutbtn{
+    background-color: #60b246;
+}
 #categoryBox{
     /* border : 1px solid red; */
     text-align: right;
@@ -398,11 +427,41 @@
     transform: translate(-50%, -50%);
     /* display: none; */
   }
-  </style>   -->
+  #img{
+    width:15%;
+   padding-right: 10%;
+  }
+  #fav{
+    width:93%;
+    height: 35px;
+   
+  }
+  #favourite{
+    float: right;
+    cursor: pointer;
+    width: 122px;
+    display: table;
+    table-layout: fixed;
+    box-shadow: 0 3px 15px 0 rgb(40 44 63 / 10%);
+    border: 1px solid rgba(0,0,0,.04);
+    height: 40px;
+    background-color: #fff;
+    padding-right: 150px;
+    padding-top:5px;
+  }
+  #favourite #img.pink {
+    filter: hue-rotate(180deg) invert(10%);
+  }
+  
+  #favourite button.pink {
+    color: rgb(219, 4, 4);
+  }
+
+  </style>  
         
 </head>
 <body>
-     <div id="fullContainer">
+     <!-- <div id="fullContainer">
      <div id="upperContainer">
         <div id="restaurantimgDiv">
             <img id="img" src="" alt="">
@@ -451,23 +510,9 @@
         </div>
         <div id="checkout"></div>
      </div>
-    </div>
-     
-
-     
-
-
-
-
-
-
-
-
-
-
-
-     <!-- <div id="root" style="height: 100%;">
-        <div id="fullContainer"> -->
+    </div> -->
+    <div id="root" style="height: 100%;">
+        <div id="fullContainer">
             <!-- <header>
                 <div id="headerContainer">
                     <div id="headerContentContainer">
@@ -492,9 +537,9 @@
                             <li id="cart"><a href="./checkout.html">Cart <span id="noOfCartItems"></span></a></li>
                         </ul>
                     </div>
-                </div> -->
-        <!-- <div id="alertBoxUpperDiv2" class="alertBoxUpperDiv"></div>
-            </header>
+                </div>
+        <div id="alertBoxUpperDiv2" class="alertBoxUpperDiv"></div>
+            </header> -->
             <div id="upperDivForDetails">
                 <div id="restaurantImageDiv">
                     <img src="" alt="">
@@ -519,6 +564,10 @@
                     </div>
                 </div>
             </div>
+            <div id="favourite">
+                
+                <button id="fav"><img id="img" src="heart.png" alt="">favourite</button>
+            </div>
             <div id="foodItemsBox">
                 <div id="categoryBox">
                     <ul id="categoryList">
@@ -532,10 +581,27 @@
                     </div>
                     <div id="totalItemsInCategory"></div>
                 </div>
+                <div id="checkout">
+                    <div id="minicheckout"></div>
+                </div>
             </div>
             <footer id="footerPart"></footer>
         </div>
-    </div> -->
+    </div>
+
+     
+
+
+
+
+
+
+
+
+
+
+
+     
 
 </body>
 </html>
