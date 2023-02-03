@@ -77,10 +77,10 @@
       "userPhoneNumber": "907938742",
       "userPassword": "PPpp@123",
       "userCart": {
-        "id": 3,
-        "name": "Mutton Roast",
-        "price": "349",
-        "details": "Medium-sized, juicy mutton pieces dry-roasted in a spicy and tangy Indian masala."
+        "id": 2,
+        "name": "Chicken Sholay kebab",
+        "price": "289",
+        "details": "Battered Fried Tender Chicken Sauteed with Fresh Curd with special Spices"
       },
       "userAddresses": [],
       "id": 2
