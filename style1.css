@@ -1,0 +1,127 @@
+body {
+    background-color: #F5F5F5;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    display: none;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    padding: 40px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: slide-in 0.5s forwards;
+  }
+  @keyframes slide-in {
+    from {
+      right: -500px;
+    }
+    to {
+      right: 0;
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      right: 0;
+    }
+    to {
+      right: -500px;
+    }
+  }
+
+  #close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 36px;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="text"],
+  input[type="password"] 
+  {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #phone{
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #FC8019;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+  }
+  
+  p {
+    margin-top: 20px;
+  }
+  
+  a {
+    color: #ff5151;
+  }
+  #loginbtn{
+    width: 100% !important;
+    padding: 17px !important;
+  }
+  h2{
+    margin-bottom: 0px !important;
+  }
+  #create{
+    margin-top: 0px !important;
+  }
+ 
+  #homelogin{
+    display: flex;
+    flex-direction: row;
+    justify-content :space-between;
+  }
+
+  #otpbtn, #verify, #continue{
+    width: 100% !important;
+    padding: 17px !important;
+    background-color: #FC8019;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+  }
+  
+  #termCondition{
+    font-size: x-small;
+    margin-top: 3px!important;
+    
+  }
+  #link2{
+    text-decoration: none;
+  }
+
+
+

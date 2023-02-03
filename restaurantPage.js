@@ -1,9 +1,10 @@
 // var restaurantId =localStorage.getItem("restaurantId");
 // var arr=[];
 // async function  callrestaurant(){
-//    try{let res=await fetch(`http://localhost:3004/Restaurants/1`);
+//    try{
+//     let res=await fetch("http://localhost:3000/Restaurants/"+restaurantId);
 //     let data=await res.json();
-    
+//    }
 //     if(data.image){
 //         displayData(data);
 //     }
@@ -522,11 +523,3 @@ function  removebtn(ele){
 }
 removebtn();
 
-
-
-// {
-        //   "name": "Baby Corn Pepper Dry",
-        //   "price": "239",
-        //   "count": 5,
-        //   "details": "Shallow-fried baby corns that are covered in a crispy batter spiced with red pepper and garam masala."
-        // },
