@@ -1,7 +1,8 @@
-// var restaurantId =localStorage.getItem("restaurantId");
+var restaurantId =localStorage.getItem("restaurantId");
 var arr=[];
 async function  callrestaurant(){
-   try{let res=await fetch(`http://localhost:3004/Restaurants/1`);
+   try{
+    let res=await fetch("http://localhost:3000/Restaurants/"+restaurantId);
     let data=await res.json();
     
     if(data.image){
