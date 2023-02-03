@@ -17,7 +17,12 @@ function displayHome(data){
         div.setAttribute("class","place");
 
         var a=document.createElement("a");
-        a.href="3bsHYHMj4xyKyfPHP1NfPMYGF4SG2M5DX3VN9eEPRWdd"
+        
+        a.href="restaurantPage.html"
+        a.addEventListener("click",function(){
+            localStorage.setItem("restaurantId",e.id);
+        })
+
         a.setAttribute("class","place-link");
 
         div.append(a);
