@@ -1,6 +1,7 @@
 body {
     background-color: #F5F5F5;
     font-family: Arial, sans-serif;
+    display: block;
   }
   
   .sidebar {
@@ -15,6 +16,7 @@ body {
     text-align: left;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     animation: slide-in 0.5s forwards;
+    z-index: 99999999;
   }
   @keyframes slide-in {
     from {
